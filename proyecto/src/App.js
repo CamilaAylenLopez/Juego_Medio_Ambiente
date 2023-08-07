@@ -15,9 +15,9 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />}></Route>
           <Route path='/informacion' element={<Informacion />} ></Route>
-          <Route path='/personas/:id' element={<JuegoUno />}></Route>
-          <Route path='/contacto' element={<JuegoDos />} ></Route>
-          <Route path='/contacto' element={<JuegoTres />} ></Route>
+          <Route path='/JuegoUno' element={<JuegoUno />}></Route>
+          <Route path='/JuegoDos' element={<JuegoDos />} ></Route>
+          <Route path='/JuegoTres' element={<JuegoTres />} ></Route>
           <Route path='*' element={<h1>Not Found</h1>} ></Route>
         </Route>
       </Routes>
