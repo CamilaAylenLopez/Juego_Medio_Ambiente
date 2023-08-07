@@ -5,11 +5,11 @@ const Layout = () => {
     return (
     <React.Fragment>
         <nav>
-            <Link to={'/Home'}>Home</Link>
-            <Link to={'/JuegoUno'}>Reciclar</Link>
-            <Link to={'/JuegoDos'}>Trivia</Link>
-            <Link to={'/JuegoTres'}>Sopa de letras</Link>
-            <Link to={'/Informacion'}>Informacion</Link>
+            <Link to={'/Home'}>Home</Link><br/>
+            <Link to={'/JuegoUno'}>Reciclar</Link><br/>
+            <Link to={'/JuegoDos'}>Trivia</Link><br/>
+            <Link to={'/JuegoTres'}>Sopa de letras</Link><br/>
+            <Link to={'/Informacion'}>Informacion</Link><br/>
         </nav>
         <Outlet />
     </React.Fragment>)

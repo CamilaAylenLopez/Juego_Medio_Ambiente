@@ -5,7 +5,7 @@ const Home = (props) => {
 
     return (
         <>
-            <h1>Bienvenidos</h1>
+            <h1 className='titulo'>Bienvenidos</h1>
             <h3>Jueguitos para aprender sobre el medio ambiente y el calentamiento</h3>
             <ol>Reciclar</ol>
             <ol>Trivia</ol>
