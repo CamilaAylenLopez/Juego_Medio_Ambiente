@@ -2,6 +2,8 @@ img{
     width: 27rem;
 
     padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
 }
 
 body{

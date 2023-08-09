@@ -10,18 +10,20 @@ import Layout from './componentes/Layout';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Home />}></Route>
-          <Route path='/informacion' element={<Informacion />} ></Route>
-          <Route path='/JuegoUno' element={<JuegoUno />}></Route>
-          <Route path='/JuegoDos' element={<JuegoDos />} ></Route>
-          <Route path='/JuegoTres' element={<JuegoTres />} ></Route>
-          <Route path='*' element={<h1>Not Found</h1>} ></Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className='centrar'>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path='/informacion' element={<Informacion />} ></Route>
+            <Route path='/JuegoUno' element={<JuegoUno />}></Route>
+            <Route path='/JuegoDos' element={<JuegoDos />} ></Route>
+            <Route path='/JuegoTres' element={<JuegoTres />} ></Route>
+            <Route path='*' element={<h1>Not Found</h1>} ></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -6,9 +6,29 @@ img{
 
 body{
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face{
+  font-family: 'spicyNoodle';
+  src: local('spicyNoodle'), url(../assets/fonts/spicy_noodle/SpicyNoodle.otf) format('opentype');
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  font-family: spicyNoodle;
+  font-size: 5rem;
+  color: #61C65D;
+}
+
+.texto{
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.cuadro{
+  word-wrap: break-word; display: flex; justify-content: flex-start; border-style: dashed;
 }

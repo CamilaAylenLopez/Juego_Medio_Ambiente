@@ -23,6 +23,12 @@ body {
     margin: 2rem;
 }
 
+.centrar {
+  margin-left: 30rem;
+  margin-right: 30rem;
+  margin-top: 5rem;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
