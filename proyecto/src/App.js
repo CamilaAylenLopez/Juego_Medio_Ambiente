@@ -7,13 +7,14 @@ import JuegoDos from './componentes/JuegoDos'
 import JuegoTres from './componentes/JuegoTres';
 import Informacion from './componentes/Informacion';
 import Layout from './componentes/Layout';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className='centrar'>
+    <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout />}>
+        <Route path='/' element={<Layout />}>
             <Route index element={<Home />}></Route>
             <Route path='/informacion' element={<Informacion />} ></Route>
             <Route path='/JuegoUno' element={<JuegoUno />}></Route>

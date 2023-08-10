@@ -6,7 +6,7 @@ const JuegoDos = (props) => {
 
   return (
     <>
-      <h1>Juego de reciclar</h1>
+      <h1>Juego dos</h1>
     </>
   )
 }

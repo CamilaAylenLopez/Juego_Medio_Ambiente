@@ -14,19 +14,12 @@
 }
 
 body {
+    
+    background: rgba(0, 0, 0, 1) url('https://fondosmil.com/fondo/2303.jpg');
     background-attachment: fixed;
-    background: rgba(0, 0, 0, 0.4) url('https://fondosmil.com/fondo/2303.jpg');
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: cover;
-    color:azure;
-    margin: 2rem;
-}
-
-.centrar {
-  margin-left: 30rem;
-  margin-right: 30rem;
-  margin-top: 5rem;
 }
 
 .App-header {

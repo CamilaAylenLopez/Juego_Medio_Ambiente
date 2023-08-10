@@ -1,14 +1,6 @@
 img{
     width: 50rem;
-
     padding-bottom: 2%;
-}
-
-body{
-    margin: 0;
-    
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face{
@@ -22,6 +14,7 @@ body{
   font-family: spicyNoodle;
   font-size: 5rem;
   color: #61C65D;
+  margin-top: 5%;
 }
 
 .texto{
@@ -30,5 +23,21 @@ body{
 }
 
 .cuadro{
-  word-wrap: break-word; display: flex; justify-content: flex-start; border-style: dashed;
+  word-wrap: break-word;  border-style: dashed;
+}
+
+.centrar {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5rem;
+}
+
+.centrarJust{
+  display: flex;
+  justify-content: center;
+}
+
+.margen{
+  margin: 8rem;
+  margin-top: 2rem;
 }
