@@ -1,8 +1,9 @@
 img{
-    width: 27rem;
+    max-width: 25%;
     padding-bottom: 2%;
     display: flex;
     justify-content: center;
+    
 }
 
 h1{
@@ -11,4 +12,35 @@ h1{
 
 .centrarJust{
     display: flex;
+}
+
+.imagenes{
+    display: 'flex'; 
+    align-items: 'center';
+    max-width: 18%;
+}
+
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none; /* for button */
+     -webkit-appearance: button; /* for input */
+       -moz-user-select: none;
+        -ms-user-select: none;
+  }
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.centrar {
+    display: flex;
+    align-items: center;
 }
