@@ -23,7 +23,9 @@ img{
 }
 
 .cuadro{
-  word-wrap: break-word;  border-style: dashed;
+  background-color: rgba(71, 71, 71, 0.54);
+  color: aliceblue;
+  word-wrap: break-word;  border-style: dashed; 
 }
 
 .cuadroDos{
