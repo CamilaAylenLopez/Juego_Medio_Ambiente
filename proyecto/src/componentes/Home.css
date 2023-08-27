@@ -35,7 +35,7 @@ img{
   color: aliceblue;
 }
 
-.centrar {
+.centrardeHome {
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 5rem;
@@ -49,4 +49,8 @@ img{
 .margen{
   margin: 8rem;
   margin-top: 2rem;
+}
+
+.margenDos{
+  margin: 2rem;
 }

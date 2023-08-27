@@ -6,18 +6,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import logojuegps from '../assets/img/logojuegps.png'
 
 const Layout = () => {
     return (
         <React.Fragment>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home">Eco</Navbar.Brand>
+                    <img src={logojuegps} className="imagenTamaño"/>
+                    <Navbar.Brand className="espacio">Eco</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                        <Link to={' '} className='linkEstilo espacio'>Home</Link>
-                        <Link to={'/Informacion'} className='linkEstilo'>Informacion</Link>
+                        <Link to={' '} className='linkEstilo espacio posicionCorrecta'>Home</Link>
+                        <Link to={'/Informacion'} className='linkEstilo posicionCorrecta espacio'>Informacion</Link>
                             <NavDropdown title="Juegos" id="basic-nav-dropdown">
                                 <NavDropdown.Item><Link to={'/JuegoUno'} className='linkEstilo'>Reciclar</Link></NavDropdown.Item>
                                 <NavDropdown.Item>

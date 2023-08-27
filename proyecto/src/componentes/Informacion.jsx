@@ -4,7 +4,7 @@ import React, { Fragment} from "react"
 const Informacion = (props) => {
 
   return (
-    <div className='margen'>
+    <div className='margenDos'>
       <h1 className='titulo'>Más información sobre le medio ambiente</h1>
       <div className='cuadroDos'>
         <p>Dentro de los primeros, agrupados bajo la denominación de factores bióticos, forman parte —además del ser humano y del resto de animales— toda la flora del planeta junto a los hongos y a pequeños organismos que cumplen funciones esenciales para el sostenimiento de la vida, y cuyo principal representante son las bacterias.</p>

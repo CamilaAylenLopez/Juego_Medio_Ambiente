@@ -6,7 +6,8 @@ const JuegoDos = (props) => {
 
   return (
     <>
-      <h1>Juego dos</h1>
+      <h1>Trivia</h1>
+      <h2>Veamos cuanto sabes sobre el medio ambiente y el calentamiento global</h2>
     </>
   )
 }

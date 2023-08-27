@@ -4,5 +4,15 @@
 }
 
 .espacio{
-    margin-right: 0.5rem;
+    margin-right: 2rem;
+}
+
+.imagenTamaño{
+    width: 8%;
+    padding: 0%;
+}
+
+.posicionCorrecta{
+    display: flex;
+    align-items: center;
 }

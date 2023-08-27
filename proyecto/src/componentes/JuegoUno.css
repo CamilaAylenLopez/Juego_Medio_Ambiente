@@ -1,20 +1,17 @@
 img{
-    max-width: 25%;
+    max-width: 18%;
     padding-bottom: 2%;
 }
 
-h1{
-    text-align: center;
-}
-
-h2{
+h1, h2{
     text-align: center;
 }
 
 .imagenes{
     display: 'flex'; 
     align-items: 'center';
-    max-width: 16%;
+    max-width: 13rem;
+    min-width: 10rem;
 }
 
 button {
