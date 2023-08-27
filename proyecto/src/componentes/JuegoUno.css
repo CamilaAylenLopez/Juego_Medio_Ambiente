@@ -1,23 +1,20 @@
 img{
     max-width: 25%;
     padding-bottom: 2%;
-    display: flex;
-    justify-content: center;
-    
 }
 
 h1{
     text-align: center;
 }
 
-.centrarJust{
-    display: flex;
+h2{
+    text-align: center;
 }
 
 .imagenes{
     display: 'flex'; 
     align-items: 'center';
-    max-width: 18%;
+    max-width: 16%;
 }
 
 button {
@@ -42,5 +39,5 @@ button {
 
 .centrar {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }

@@ -5,6 +5,7 @@ import Table from 'react-bootstrap/Table';
 
 const JuegoUno = (props) => {
   const [objetoActual, setObjetoActual] = useState(0)
+  const [puntos, setPuntos] = useState(0)
   const [objeto, setObjeto] = useState([{
     objeto: 'cuaderno',
     tacho: 'azul',
@@ -24,49 +25,66 @@ const JuegoUno = (props) => {
     objeto: 'pañal usado',
     tacho: 'negro',
     imagen: 'https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_image__small/public/temas/panales-que-son_0.jpg'
-  }
+  },
+  {
+    objeto: 'diario',
+    tacho: 'azul',
+    imagen: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Primera_edici%C3%B3n_del_diario_argentino_Clar%C3%ADn.jpg'
+  },
+  {
+    objeto: 'tuerca',
+    tacho: 'amarillo',
+    imagen: 'https://www.bmbulmetal.com.ar/database/articulos/fotos/62/TUERCA-HEXAGONAL-GRADO2-HIERRO-UNC-UNF-WTW-CALIDAD8.8-METRICO-PULGADA-MA-MB-MC.jpg'
+  },
+  {
+    objeto: 'lata',
+    tacho: 'amarillo',
+    imagen: 'https://img.freepik.com/vector-premium/lata-aluminio-brillante-refresco-o-plantilla-cerveza-blanco_88653-860.jpg'
+  },
+  {
+    objeto: 'pañuelo',
+    tacho: 'negro',
+    imagen: 'https://s03.s3c.es/imag/_v0/770x420/8/8/9/GettyImages-97611377.jpg'
+  },
+  {
+    objeto: 'botella de plastico',
+    tacho: 'verde',
+    imagen: 'https://d100mj7v0l85u5.cloudfront.net/s3fs-public/sidelg.jpg'
+  },
   ])
 
-  const [tachoBasura, setTachoBasura] = useState([{
-    color: 'azul',
-    descripcion: 'AZUL: Folios, libretas, periódicos, revistas, papel de regalo y de envolver, sobres (sin ventanilla), folletos de publicidad. Cajas, piezas de cartón y envases (de cereales, galletas, comidas pre-cocinadas y congeladas, comida rápida, zapatos, etc.).',
-    imagen: 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_PAPEL_Y_CARTON.jpg'
-  },
-  {
-    color: 'marron',
-    descripcion: 'Los materiales que se pueden depositar en este contenedor son: restos de comida de origen animal (carne y pescado, caparazones y conchas de marisco, queso, cáscaras de huevo) y vegetal (verduras, frutas, semillas, frutos secos y sus cáscaras, cereales, restos vegetales) y, no cocinados o cocinados restos de flores, ...',
-    imagen: 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_ORGANICOS.jpg'
-  },
-  {
-    color: 'verde',
-    descripcion: 'El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio. En esta categoría deben reciclarse las botellas de vidrio, tarros, trozos de espejos y cristales rotos, entre otros.',
-    imagen: 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_APROVECHABLES.jpg'
-  },
-  {
-    color: 'negro',
-    descripcion: 'Color negro: Para depositar residuos no aprovechables como el papel higiénico; servilletas, papeles y cartones contaminados con comida; papeles metalizados, entre otros. Color verde: Para depositar residuos orgánicos aprovechables como los restos de comida, desechos agrícolas etc.',
-    imagen: 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_NO_APROVECHABLES.jpg'
-  },
-  ])
   useEffect(() => {
     setObjetoActual(Math.floor(Math.random() * objeto.length))
-  }, [])
+  }, [ , objetoActual])
+
+  const verificar = (e) => {
+    e.preventDefault();
+    if (objeto[objetoActual].tacho === e.target.alt) {
+      setObjetoActual(Math.floor(Math.random() * objeto.length));
+      setPuntos(puntos + 20)
+    }
+    else {
+      alert('Prueba otra vez :)');
+    }
+  }
 
   return (
     <>
       <h1>Juego de reciclar</h1>
-      <form >
-        
-          <img className='centrar' alt='' src={objeto[objetoActual].imagen} />
-        
+      <h2>puntos: {puntos}</h2>
+      <div className='centrar'>
+        <img alt='' src={objeto[objetoActual].imagen} />
+      </div>
 
-        <div className='contenedor'>
-          <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_PAPEL_Y_CARTON.jpg'}/>
-          <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_ORGANICOS.jpg'}/>
-          <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_APROVECHABLES.jpg'}/>
-          <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_NO_APROVECHABLES.jpg'}/>
-        </div>
-      </form>
+      <div className='contenedor'>
+        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_PAPEL_Y_CARTON.jpg'} value='azul' onClick={verificar} alt='azul'/>
+        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_ORGANICOS.jpg'} value='marron' onClick={verificar} alt='marron'/>
+        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_APROVECHABLES.jpg'} value='verde' onClick={verificar} alt='verde'/>
+        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_NO_APROVECHABLES.jpg'} value='negro' onClick={verificar} alt='negro'/>
+        <img className='imagenes' src={'https://www.jqs-consulting.com/wp-content/uploads/2023/03/63.png'} value='amarillo' onClick={verificar} alt='amarillo'/>
+      </div>
+
+      
     </>
   )
 }
