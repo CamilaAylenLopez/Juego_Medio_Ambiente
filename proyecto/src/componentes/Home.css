@@ -8,6 +8,12 @@ img{
   src: local('spicyNoodle'), url(../assets/fonts/spicy_noodle/SpicyNoodle.otf) format('opentype');
 }
 
+.posicionarMapa{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .titulo {
   display: flex;
   justify-content: center;
