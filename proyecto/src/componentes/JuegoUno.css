@@ -7,6 +7,10 @@ h1, h2, h4{
     text-align: center;
 }
 
+h6{
+    cursor: pointer;
+}
+
 .imagenes{
     display: 'flex'; 
     align-items: 'center';
