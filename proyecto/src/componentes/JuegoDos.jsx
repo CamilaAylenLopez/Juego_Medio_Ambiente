@@ -1,11 +1,11 @@
 import './JuegoUno.css'
 import React, { useEffect, useState } from "react"
 
-
 const JuegoDos = (props) => {
   const [preguntaActual, setPreguntaActual] = useState(0)
   const [juegoTerminado, setJuegoTerminado] = useState(false)
   const [puntos, setPuntos] = useState(0)
+  const [respondioCorrectamente, setRespondioCorrectamente] = useState(false)
   const [elId, setElId] = useState(1)
   const [preguntas, setPreguntas] = useState([{
     id: '1',
@@ -123,7 +123,7 @@ const JuegoDos = (props) => {
 
   const verificar = (e) => {
     e.preventDefault();
-    if (juegoTerminado === false) {
+    if (juegoTerminado === false || puntos === -20) {
       if (preguntas[preguntaActual].respuestaCorrecta === e.target.id) {
         setPuntos(puntos + 20)
         if (preguntaActual === 11) {
@@ -131,12 +131,14 @@ const JuegoDos = (props) => {
           alert('El juego termino!!!')
         }
         else {
+          setRespondioCorrectamente(true)
           setElId(elId + 1)
-          setPreguntaActual(elId);
+          setPreguntaActual(elId)
         }
       }
       else {
-        alert('Prueba otra vez :)');
+        setPuntos(puntos - 10)
+        alert('Prueba otra vez :)')
       }
     }
     else {
@@ -154,12 +156,14 @@ const JuegoDos = (props) => {
       <div className='centrar'>
         <img src={juegoTerminado === true ? 'https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg' : null}/>
       </div>
-      <div className='cuadro'>
-        <h4 className='margenJuegoDos'><b>{preguntas[preguntaActual].id}/12</b>{preguntas[preguntaActual].pregunta}</h4>
-        <h6 className='margenJuegoDos' id='a' onClick={verificar}>{preguntas[preguntaActual].a}</h6>
-        <h6 className='margenJuegoDos' id='b' onClick={verificar}>{preguntas[preguntaActual].b}</h6>
-        <h6 className='margenJuegoDos' id='c' onClick={verificar}>{preguntas[preguntaActual].c}</h6>
-
+      <div className={juegoTerminado === true ? null : 'cuadro'}>
+        <h4 className='margenJuegoDos'>{juegoTerminado === true ? null : preguntas[preguntaActual].id + '/12 ' + preguntas[preguntaActual].pregunta}</h4>
+        <h6 className='margenJuegoDos' id='a' onClick={verificar}>{juegoTerminado === true ? null : 'a) ' + preguntas[preguntaActual].a}</h6>
+        <h6 className='margenJuegoDos' id='b' onClick={verificar}>{juegoTerminado === true ? null : 'b) ' + preguntas[preguntaActual].b}</h6>
+        <h6 className='margenJuegoDos' id='c' onClick={verificar}>{preguntas[preguntaActual].c !== null ? 'c) ' + preguntas[preguntaActual].c : null}</h6>
+      </div>
+      <div className={respondioCorrectamente === true ? 'caudroDos' : null}>
+        <h4 className='margenJuegoDos'>{respondioCorrectamente === true ? preguntas[preguntaActual].explicacion : null}</h4>
       </div>
     </div>
     </>

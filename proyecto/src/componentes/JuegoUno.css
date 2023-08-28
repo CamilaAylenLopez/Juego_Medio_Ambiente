@@ -26,7 +26,16 @@ h1, h2, h4{
     word-wrap: break-word;  border-style: dashed; 
     margin-left: 5rem;
     margin-right: 5rem;
-  }
+}
+
+.caudroDos{
+    background-color: rgba(39, 77, 102, 0.54);
+    color: aliceblue;
+    word-wrap: break-word;  border-style: dashed; 
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+}
 
 button {
     background: none;

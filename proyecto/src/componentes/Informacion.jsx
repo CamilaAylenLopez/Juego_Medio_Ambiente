@@ -7,6 +7,7 @@ const Informacion = (props) => {
     <div className='margenDos'>
       <h1 className='titulo'>Más información sobre le medio ambiente</h1>
       <div className='cuadroDos'>
+        <h3>El cambio climatico</h3>
         <p>Dentro de los primeros, agrupados bajo la denominación de factores bióticos, forman parte —además del ser humano y del resto de animales— toda la flora del planeta junto a los hongos y a pequeños organismos que cumplen funciones esenciales para el sostenimiento de la vida, y cuyo principal representante son las bacterias.</p>
         <p>En cuanto a los elementos sin vida, conocidos como factores abióticos, son esenciales para la subsistencia de los organismos vivos y conforman el espacio físico del ambiente, siendo los componentes básicos del ecosistema, es decir, el agua, el aire y el suelo. En cuanto a los artificiales, creados por el ser humano, cabe destacar las tradiciones, la urbanización o la cultura. La suma de todos conforma el medioambiente.</p>
         <p>Todo lo relacionado con el medioambiente es estudiado por la ecología, una rama de la biología especializada en los seres vivos y en su interacción con el medio. Los especialistas de esta disciplina tienen en la forestación una cuestión fundamental, ya que los árboles cumplen funciones vitales para gran parte de la fauna existente y para los seres humanos. Tanto es así que son los principales productores de oxígeno de los ecosistemas terrestres.</p>

@@ -1,6 +1,5 @@
 import './Home.css'
 import React, { Fragment } from "react"
-import { Link, Outlet } from "react-router-dom";
 
 const Home = (props) => {
 

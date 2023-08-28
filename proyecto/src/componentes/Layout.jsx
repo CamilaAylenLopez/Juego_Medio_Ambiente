@@ -13,17 +13,17 @@ const Layout = () => {
         <React.Fragment>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <img src={logojuegps} className="imagenTamaño"/>
-                    <Navbar.Brand className="espacio">Eco</Navbar.Brand>
+                    <img src={logojuegps} className="imagenTamaño" alt="logo"/>
+                    <Navbar.Brand className="espacio">Eco-SalvandoAlPlaneta.com</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                        <Link to={' '} className='linkEstilo espacio posicionCorrecta'>Home</Link>
-                        <Link to={'/Informacion'} className='linkEstilo posicionCorrecta espacio'>Informacion</Link>
+                            <Link to={' '} className='linkEstilo espacio posicionCorrecta'>Home</Link>
+                            <Link to={'/Informacion'} className='linkEstilo posicionCorrecta espacio'>Informacion</Link>
                             <NavDropdown title="Juegos" id="basic-nav-dropdown">
                                 <NavDropdown.Item><Link to={'/JuegoUno'} className='linkEstilo'>Reciclar</Link></NavDropdown.Item>
                                 <NavDropdown.Item>
-                                <Link to={'/JuegoDos'} className='linkEstilo'>Trivia</Link>
+                                    <Link to={'/JuegoDos'} className='linkEstilo'>Trivia</Link>
                                 </NavDropdown.Item>
                                 <NavDropdown.Item><Link to={'/JuegoTres'} className='linkEstilo'>Sopa de letras</Link></NavDropdown.Item>
                             </NavDropdown>
@@ -31,8 +31,8 @@ const Layout = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-                <Outlet />
-            </React.Fragment>
+            <Outlet />
+        </React.Fragment>
     )
 }
 

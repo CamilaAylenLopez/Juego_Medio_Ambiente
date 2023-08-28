@@ -61,13 +61,10 @@ const JuegoUno = (props) => {
     e.preventDefault();
     if (juegoTerminado === false) {
       if (objeto[objetoActual].tacho === e.target.alt) {
-        //setObjetoActual(Math.floor(Math.random() * objeto.length));
         setPuntos(puntos + 20)
-
         const objetosSinUsar = objeto.slice()
         objetosSinUsar.splice(objetoActual, 1)
         setObjeto(objetosSinUsar)
-
         if (objetosSinUsar.length === 0) {
           setJuegoTerminado(true)
           alert('El juego termino!!!')
