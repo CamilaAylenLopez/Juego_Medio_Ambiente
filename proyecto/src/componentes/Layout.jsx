@@ -11,7 +11,7 @@ import logojuegps from '../assets/img/logojuegps.png'
 const Layout = () => {
     return (
         <React.Fragment>
-            <Navbar expand="lg" className="bg-body-tertiary">
+            <Navbar expand="lg" className="bg-body-tertiary fixed-top">
                 <Container>
                     <img src={logojuegps} className="imagenTamaño" alt="logo"/>
                     <Navbar.Brand className="espacio">Eco-SalvandoAlPlaneta.com</Navbar.Brand>

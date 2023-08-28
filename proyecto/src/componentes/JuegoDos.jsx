@@ -158,15 +158,16 @@ const JuegoDos = (props) => {
       <div className='centrar'>
         <img src={juegoTerminado === 1 ? 'https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg' : juegoTerminado === 2 ? 'https://i.pinimg.com/550x/b6/be/1f/b6be1f7dde9692dd57419a5ea89a9faa.jpg' : null}/>
       </div>
+      <div className={respondioCorrectamente === true ? 'caudroDos' : null}>
+        <h4 className='margenJuegoDos'>sobre la pregunta anterior.... {respondioCorrectamente === true ? preguntas[preguntaActual].explicacion : null}</h4>
+      </div>
       <div className={juegoTerminado === 1 || juegoTerminado === 2 ? null : 'cuadro'}>
         <h4 className='margenJuegoDos'>{juegoTerminado === 1 || juegoTerminado ===2 ? null : preguntas[preguntaActual].id + '/12 ' + preguntas[preguntaActual].pregunta}</h4>
         <h6 className='margenJuegoDos' id='a' onClick={verificar}>{juegoTerminado === 1 || juegoTerminado === 2  ? null : 'a) ' + preguntas[preguntaActual].a}</h6>
         <h6 className='margenJuegoDos' id='b' onClick={verificar}>{juegoTerminado === 1 || juegoTerminado === 2  ? null : 'b) ' + preguntas[preguntaActual].b}</h6>
-        <h6 className='margenJuegoDos' id='c' onClick={verificar}>{preguntas[preguntaActual].c !== null ? 'c) ' + preguntas[preguntaActual].c : null}</h6>
+        <h6 className='margenJuegoDos' id='c' onClick={verificar}>{juegoTerminado === 1 || juegoTerminado === 2  ? null : preguntas[preguntaActual].c !== null ? 'c) ' + preguntas[preguntaActual].c : null}</h6>
       </div>
-      <div className={respondioCorrectamente === true ? 'caudroDos' : null}>
-        <h4 className='margenJuegoDos'>{respondioCorrectamente === true ? preguntas[preguntaActual].explicacion : null}</h4>
-      </div>
+      
     </div>
     </>
   )
