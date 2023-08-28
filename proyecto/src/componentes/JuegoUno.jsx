@@ -1,7 +1,6 @@
 import './JuegoUno.css'
 import React, { useEffect, useState } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Table from 'react-bootstrap/Table';
 
 const JuegoUno = (props) => {
   const [objetoActual, setObjetoActual] = useState(0)
