@@ -3,7 +3,7 @@ img{
     padding-bottom: 2%;
 }
 
-h1, h2{
+h1, h2, h4{
     text-align: center;
 }
 
@@ -13,6 +13,20 @@ h1, h2{
     max-width: 13rem;
     min-width: 10rem;
 }
+
+.margenJuegoDos{    
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.cuadro{
+    background-color: rgba(71, 71, 71, 0.54);
+    color: aliceblue;
+    word-wrap: break-word;  border-style: dashed; 
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 
 button {
     background: none;

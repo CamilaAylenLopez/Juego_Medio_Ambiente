@@ -6,11 +6,13 @@ const JuegoDos = (props) => {
   const [preguntaActual, setPreguntaActual] = useState(0)
   const [juegoTerminado, setJuegoTerminado] = useState(false)
   const [puntos, setPuntos] = useState(0)
+  var inicio = 0
   const [preguntas, setPreguntas] = useState([{
     id: '1',
     pregunta: 'El cambio climático es uno de los temas más presentes en la actualidad; ocupa conversaciones, titulares de periódicos y forma parte de las agendas políticas de la mayoría de países de todo el mundo. Por ello, no podríamos empezar este test si no aclarando este concepto, por lo que os preguntamos: ¿Sabes qué es el cambio climático?',
     a: 'Se trata de los cambios a largo plazo de las temperaturas y los patrones climáticos a nivel global de nuestro planeta',
     b: 'Es el simple aumento de la temperatura de la Tierra',
+    c: null,
     respuestaCorrecta: 'a',
     explicacion: 'Exacto, cuando hablamos de cambio climático nos referimos la variación de global del clima de la Tierra a largo plazo. Estos cambios han existido desde comienzos de la historia de la Tierra y ahora mismo estamos viviendo uno de ellos. Con la salvedad, eso sí, de que por primera vez en nuestra historia disponemos de las herramientas y los datos suficientes como para estudiar el fenómeno.'
   },
@@ -19,6 +21,7 @@ const JuegoDos = (props) => {
     pregunta: 'En una de las respuestas anteriores hablamos del aumento de las temperaturas de la Tierra. ¿Dirías que el calentamiento global y el cambio climático son el mismo fenómeno?',
     a: 'Si, son exactamente lo mismo',
     b: 'En absoluto, habría que diferenciar algunos matices',
+    c: null,
     respuestaCorrecta: 'b',
     explicacion: 'Si has diferenciado entre los dos fenómenos estás en lo correcto. El calentamiento global y el cambio climático no son exactamente lo mismo, si no que el segundo es una consecuencia del cambio climático actual.',
   },
@@ -36,6 +39,7 @@ const JuegoDos = (props) => {
     pregunta: 'Ahora que sabes que el cambio climático tiene un componente antropogénico, ¿cúal dirías que es la principal causa de que se produzca?',
     a: 'El agujero de la capa de ozono',
     b: 'La acumulación de gases de efecto invernadero en la atmósfera',
+    c: null,
     respuestaCorrecta: 'b',
     explicacion: 'La principal razón del cambio climático actual es el aumento de los llamados gases de efecto invernadero en la atmósfera, principalmente aquellos procedentes de la quema de combustibles fósiles como el petróleo y el carbón. Su acumulación en la capa gaseosa de nuestro planeta intensifica el efecto invernadero que se produce de forma natural en la Tierra, sin el cual no sería posible la vida en la Tierra, pero que en exceso, puede afectar al clima a nivel global.',
   },
@@ -44,6 +48,7 @@ const JuegoDos = (props) => {
     pregunta: 'Hablando de gases de efecto invernadero, ¿sabes cuál de los que enumeramos a continuación no es uno de ellos?',
     a: 'Dióxido de Carbono',
     b: 'Hidrógeno',
+    c: null,
     respuestaCorrecta: 'b',
     explicacion: 'El único de los gases que no contribuye al afecto invernadero de este listado es el hidrógeno. Se trata de uno de los gases menos abundantes de nuestra atmósfera y uno de los más ligeros, por lo que suele desplazarse a las capas altas de la atmósfera y escapar de nuestro planeta. Los demás gases citados se acumulan en nuestra atmósfera y absorben la radiación infrarroja del sol, lo que provoca un calentamiento global del planeta al no dejar escapar el calor.',
   },
@@ -52,6 +57,7 @@ const JuegoDos = (props) => {
     pregunta: 'Estos gases de efecto invernadero proceden de varias fuentes, algunas de las cuales citamos a continuación, pero, ¿sabrías decir cuál es la principal fuente actual de gases de efecto invernadero y por tanto el principal responsable de cambio climático?',
     a: 'La obtención de energía',
     b: 'El transporte',
+    c: null,
     respuestaCorrecta: 'a',
     explicacion: 'La principal fuente de gases de efecto invernadero en la actualidad es la producción de energía, sobre todo la obtenida a partir de combustibles fósiles como el petróleo, el gas natural o el carbón.',
   },
@@ -69,17 +75,17 @@ const JuegoDos = (props) => {
     pregunta: 'Dicho esto, ¿sabes quién fue el primero en relacionar el aumento de la temperatura de la Tierra con la acumulación de dióxido de carbono?',
     a: 'John Tyndall',
     b: 'Eunice Foote',
+    c: null,
     respuestaCorrecta: 'b',
     explicacion: 'La primera persona que propuso que la concentración de CO2 en la atmósfera podía provocar un aumento significativo de la temperatura de la Tierra fue una climatóloga estadounidense llamada Eunice Foote. Sin embargo, la fama se la llevó el irlandés John Tyndall unos años más tarde.',
   },
   {
     id: '9',
     pregunta: 'Nos estamos centrando mucho en el aumento de las temperaturas, pero que haga más calor no es, ni de lejos, la única consecuencia del cambio climático. ¿Sabes qué otros efectos para la vida en la Tierra tiene este fenómeno?',
-    a: 'Mayor propagación de enfermedades y de los vectores que las transmiten',
-    b: 'Aumento de sequias e inundaciones',
-    c: 'Aumento de los fenómenos naturales extremos',
-    d: 'Todas las respuestas son correctas',
-    respuestaCorrecta: 'd',
+    a: 'Aumento de sequias e inundaciones',
+    b: 'Aumento de los fenómenos naturales extremos',
+    c: 'Todas las respuestas son correctas',
+    respuestaCorrecta: 'c',
     explicacion: 'Efectivamente, todas las citadas son potenciales consecuencias del cambio climático en la Tierra. Pero además, el cambio climático también tiene responsabilidad en el derretimiento de los glaciares, el aumento del nivel del mar, en cambios abruptos en los ecosistemas o en la desaparición de algunas especies en nuestro planeta.',
   },
   {
@@ -87,6 +93,7 @@ const JuegoDos = (props) => {
     pregunta: 'Vamos a poner algunas cifras: ¿Desde su inicio, cuanto crees que ha aumentado la temperatura en la Tierra debido al cambio climático?',
     a: '1,5ºC',
     b: '1,1ºC',
+    c: null,
     respuestaCorrecta: 'a',
     explicacion: 'Para realizar esta afirmación los científicos toman como referencia los las temperaturas anteriores a la era industrial, momento desde el cual han aumentado en 1,1ºC según informes de las Naciones Unidas. Según los expertos se trata de un cambio muy abrupto y producido en un lapso muy corto de tiempo.',
   },
@@ -95,6 +102,7 @@ const JuegoDos = (props) => {
     pregunta: 'Esto nos lleva a una pregunta obligada: ¿Sabes a cuánto habría que limitar el aumento de la temperatura media global para evitar las peores consecuencias del cambio climático?',
     a: '1,5ºC',
     b: '4ºC',
+    c: null,
     respuestaCorrecta: 'a',
     explicacion: 'Según el consenso científico, un aumento superior a los 1,5 ºC podría tener consecuencias desastrosas para el planeta, por o que el Acuerdo de París estableció como meta limitar el aumento de las temperaturas globales a menos de 2ºC por encima de los niveles preindustriales, preferiblemente a 1,5ºC.',
   },
@@ -103,32 +111,27 @@ const JuegoDos = (props) => {
     pregunta: 'Y para terminar, un momento histórico: ¿sabes qué gran acuerdo internacional estableció por primera vez objetivos de reducción de gases de efecto invernadero?',
     a: 'Acuerdo de Greta Thunberg',
     b: 'Protocolo de Kioto',
+    c: null,
     respuestaCorrecta: 'b',
     explicacion: 'Exacto, el famoso protocolo de Kioto fue el primero en establecer con su entrada en vigor en el año 2005, el objetivo de reducir los gases de efecto invernadero en los países desarrollados y en vías de desarrollo. Estableció que las emisiones de gases de efecto invernadero de los países industrializados deberían reducirse al menos un 5% por debajo de los niveles de 1990 en el período 2008-2012.',
   },
   ])
 
   useEffect(() => {
-    setPreguntaActual(Math.floor(Math.random() * preguntaActual.length))
+    setPreguntaActual(0)
   }, [])
 
   const verificar = (e) => {
     e.preventDefault();
     if (juegoTerminado === false) {
-      if (preguntas[preguntaActual].respuesta === e.target.alt) {
-        //setObjetoActual(Math.floor(Math.random() * objeto.length));
+      if (preguntas[preguntaActual].respuesta === e.target.id) {
         setPuntos(puntos + 20)
-
-        const objetosSinUsar = preguntas.slice()
-        objetosSinUsar.splice(preguntaActual, 1)
-        setPreguntas(objetosSinUsar)
-
-        if (objetosSinUsar.length === 0) {
+        if (preguntaActual.length === 12) {
           setJuegoTerminado(true)
           alert('El juego termino!!!')
         }
         else {
-          setPreguntaActual(Math.floor(Math.random() * objetosSinUsar.length));
+          setPreguntaActual(preguntaActual[inicio++]);
         }
       }
       else {
@@ -143,10 +146,17 @@ const JuegoDos = (props) => {
 
   return (
     <>
+    <div>
       <h1>Juego de trivia</h1>
       <h2>Veamos cuanto sabes sobre el calentamiento global y el cambio climatico</h2>
       <h2>puntos: {puntos}</h2>
-
+      <div className='cuadro'>
+        <h4 className='margenJuegoDos'><b>{preguntas[preguntaActual].id}/12</b>{preguntas[preguntaActual].pregunta}</h4>
+        <h6 className='margenJuegoDos' id='a' onClick={verificar}>{preguntas[preguntaActual].a}</h6>
+        <h6 className='margenJuegoDos' id='b' onClick={verificar}>{preguntas[preguntaActual].b}</h6>
+        <h6 className='margenJuegoDos' id='c' onClick={verificar}>{preguntas[preguntaActual].c}</h6>
+      </div>
+    </div>
     </>
   )
 }
