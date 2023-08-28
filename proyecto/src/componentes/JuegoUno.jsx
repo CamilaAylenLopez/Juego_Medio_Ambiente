@@ -84,8 +84,8 @@ const JuegoUno = (props) => {
 
   return (
     <>
-      <h1>Juego de reciclar</h1>
-      <h2>puntos: {puntos}</h2>
+      <h1 className='titulo'>Juego de reciclar</h1>
+      <h2>Puntos: {puntos}</h2>
       <div className='centrar'>
         <img className='imagenObjeto' alt='' src={Object.keys(objeto).length === 0 ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : objeto[objetoActual].imagen} />
       </div>

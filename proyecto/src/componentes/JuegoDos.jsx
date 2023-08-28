@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 
 const JuegoDos = (props) => {
   const [preguntaActual, setPreguntaActual] = useState(0)
-  const [juegoTerminado, setJuegoTerminado] = useState(false)
+  const [juegoTerminado, setJuegoTerminado] = useState(0)
   const [puntos, setPuntos] = useState(0)
   const [respondioCorrectamente, setRespondioCorrectamente] = useState(false)
   const [elId, setElId] = useState(1)
@@ -123,11 +123,11 @@ const JuegoDos = (props) => {
 
   const verificar = (e) => {
     e.preventDefault();
-    if (juegoTerminado === false || puntos === -20) {
+    if (juegoTerminado === 0) {
       if (preguntas[preguntaActual].respuestaCorrecta === e.target.id) {
         setPuntos(puntos + 20)
         if (preguntaActual === 11) {
-          setJuegoTerminado(true)
+          setJuegoTerminado(1)
           alert('El juego termino!!!')
         }
         else {
@@ -139,6 +139,9 @@ const JuegoDos = (props) => {
       else {
         setPuntos(puntos - 10)
         alert('Prueba otra vez :)')
+        if(puntos <= -20){
+          setJuegoTerminado(2)
+        }
       }
     }
     else {
@@ -149,16 +152,16 @@ const JuegoDos = (props) => {
   return (
     <>
     <div>
-      <h1>Juego de trivia</h1>
+      <h1 className='titulo'>Juego de trivia</h1>
       <h2>Veamos cuanto sabes sobre el calentamiento global y el cambio climatico</h2>
-      <h2>puntos: {puntos}</h2>
+      <h2>Puntos: {puntos}</h2>
       <div className='centrar'>
-        <img src={juegoTerminado === true ? 'https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg' : null}/>
+        <img src={juegoTerminado === 1 ? 'https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg' : juegoTerminado === 2 ? 'https://i.pinimg.com/550x/b6/be/1f/b6be1f7dde9692dd57419a5ea89a9faa.jpg' : null}/>
       </div>
-      <div className={juegoTerminado === true ? null : 'cuadro'}>
-        <h4 className='margenJuegoDos'>{juegoTerminado === true ? null : preguntas[preguntaActual].id + '/12 ' + preguntas[preguntaActual].pregunta}</h4>
-        <h6 className='margenJuegoDos' id='a' onClick={verificar}>{juegoTerminado === true ? null : 'a) ' + preguntas[preguntaActual].a}</h6>
-        <h6 className='margenJuegoDos' id='b' onClick={verificar}>{juegoTerminado === true ? null : 'b) ' + preguntas[preguntaActual].b}</h6>
+      <div className={juegoTerminado === 1 || juegoTerminado === 2 ? null : 'cuadro'}>
+        <h4 className='margenJuegoDos'>{juegoTerminado === 1 || juegoTerminado ===2 ? null : preguntas[preguntaActual].id + '/12 ' + preguntas[preguntaActual].pregunta}</h4>
+        <h6 className='margenJuegoDos' id='a' onClick={verificar}>{juegoTerminado === 1 || juegoTerminado === 2  ? null : 'a) ' + preguntas[preguntaActual].a}</h6>
+        <h6 className='margenJuegoDos' id='b' onClick={verificar}>{juegoTerminado === 1 || juegoTerminado === 2  ? null : 'b) ' + preguntas[preguntaActual].b}</h6>
         <h6 className='margenJuegoDos' id='c' onClick={verificar}>{preguntas[preguntaActual].c !== null ? 'c) ' + preguntas[preguntaActual].c : null}</h6>
       </div>
       <div className={respondioCorrectamente === true ? 'caudroDos' : null}>
