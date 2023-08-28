@@ -144,7 +144,6 @@ const JuegoDos = (props) => {
     else {
       alert('EL JUEGO TERMINO!!!!!!!!!!')
     }
-
   }
 
   return (

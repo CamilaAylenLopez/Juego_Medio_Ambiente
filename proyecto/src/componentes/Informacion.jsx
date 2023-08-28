@@ -1,5 +1,5 @@
 import './Home.css'
-import React, { Fragment} from "react"
+import React from "react"
 
 const Informacion = (props) => {
 

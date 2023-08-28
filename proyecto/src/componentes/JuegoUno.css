@@ -16,6 +16,14 @@ h6{
     align-items: 'center';
     max-width: 13rem;
     min-width: 10rem;
+    cursor: pointer;
+}
+
+.imagenObjeto{
+    max-width: 19rem;
+    min-width: 10rem;
+    min-height: 15rem;
+    max-height: 25rem;
 }
 
 .margenJuegoDos{    
