@@ -140,7 +140,7 @@ const JuegoDos = (props) => {
       }
     }
     else {
-      alert('EL JUEGO TERMINO. EL GATO NO ES UN OBJETO. NO VA A LA BASURAAAAAAAAAAAA!!!!!!!!!')
+      alert('EL JUEGO TERMINO!!!!!!!!!!')
     }
 
   }
@@ -151,6 +151,9 @@ const JuegoDos = (props) => {
       <h1>Juego de trivia</h1>
       <h2>Veamos cuanto sabes sobre el calentamiento global y el cambio climatico</h2>
       <h2>puntos: {puntos}</h2>
+      <div className='centrar'>
+        <img src={juegoTerminado === true ? 'https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg' : null}/>
+      </div>
       <div className='cuadro'>
         <h4 className='margenJuegoDos'><b>{preguntas[preguntaActual].id}/12</b>{preguntas[preguntaActual].pregunta}</h4>
         <h6 className='margenJuegoDos' id='a' onClick={verificar}>{preguntas[preguntaActual].a}</h6>

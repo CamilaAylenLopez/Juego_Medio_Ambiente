@@ -91,7 +91,7 @@ const JuegoUno = (props) => {
       <h1>Juego de reciclar</h1>
       <h2>puntos: {puntos}</h2>
       <div className='centrar'>
-        <img alt='' src={Object.keys(objeto).length === 0 ? "https://assets.epuzzle.info/puzzle/079/716/original.jpg" : objeto[objetoActual].imagen} />
+        <img alt='' src={Object.keys(objeto).length === 0 ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : objeto[objetoActual].imagen} />
       </div>
 
       <div className='contenedor'>
