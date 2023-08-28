@@ -7,6 +7,7 @@ import JuegoDos from './componentes/JuegoDos'
 import JuegoTres from './componentes/JuegoTres';
 import Informacion from './componentes/Informacion';
 import Layout from './componentes/Layout';
+import PuntosVerdes from './componentes/PuntosVerdes';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path='/JuegoUno' element={<JuegoUno />}></Route>
             <Route path='/JuegoDos' element={<JuegoDos />} ></Route>
             <Route path='/JuegoTres' element={<JuegoTres />} ></Route>
+            <Route path='/PuntosVerdes' element={<PuntosVerdes />} ></Route>
             <Route path='*' element={<h1>Not Found</h1>} ></Route>
           </Route>
         </Routes>
