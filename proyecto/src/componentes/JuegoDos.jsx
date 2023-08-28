@@ -6,7 +6,7 @@ const JuegoDos = (props) => {
   const [preguntaActual, setPreguntaActual] = useState(0)
   const [juegoTerminado, setJuegoTerminado] = useState(false)
   const [puntos, setPuntos] = useState(0)
-  const [elId, setElId] = useState(0)
+  const [elId, setElId] = useState(1)
   const [preguntas, setPreguntas] = useState([{
     id: '1',
     pregunta: 'El cambio climático es uno de los temas más presentes en la actualidad; ocupa conversaciones, titulares de periódicos y forma parte de las agendas políticas de la mayoría de países de todo el mundo. Por ello, no podríamos empezar este test si no aclarando este concepto, por lo que os preguntamos: ¿Sabes qué es el cambio climático?',
@@ -126,7 +126,7 @@ const JuegoDos = (props) => {
     if (juegoTerminado === false) {
       if (preguntas[preguntaActual].respuestaCorrecta === e.target.id) {
         setPuntos(puntos + 20)
-        if (preguntaActual.length === 12) {
+        if (preguntaActual === 11) {
           setJuegoTerminado(true)
           alert('El juego termino!!!')
         }
