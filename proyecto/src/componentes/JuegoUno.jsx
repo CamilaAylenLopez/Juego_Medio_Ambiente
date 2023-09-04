@@ -90,11 +90,11 @@ const JuegoUno = (props) => {
         <img className='imagenObjeto' alt='' src={Object.keys(objeto).length === 0 ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : objeto[objetoActual].imagen} />
       </div>
       <div className='contenedor'>
-        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_PAPEL_Y_CARTON.jpg'} value='azul' onClick={verificar} alt='azul' />
-        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_ORGANICOS.jpg'} value='marron' onClick={verificar} alt='marron' />
-        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_APROVECHABLES.jpg'} value='verde' onClick={verificar} alt='verde' />
-        <img className='imagenes' src={'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_NO_APROVECHABLES.jpg'} value='negro' onClick={verificar} alt='negro' />
-        <img className='imagenes' src={'https://www.jqs-consulting.com/wp-content/uploads/2023/03/63.png'} value='amarillo' onClick={verificar} alt='amarillo' />
+        <img className='imagenes' src={juegoTerminado ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_PAPEL_Y_CARTON.jpg'} value='azul' onClick={verificar} alt='azul' />
+        <img className='imagenes' src={juegoTerminado ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_ORGANICOS.jpg'} value='marron' onClick={verificar} alt='marron' />
+        <img className='imagenes' src={juegoTerminado ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_APROVECHABLES.jpg'} value='verde' onClick={verificar} alt='verde' />
+        <img className='imagenes' src={juegoTerminado ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : 'https://www.reyplast.pe/imagenes/PAPELERA_COSMOS_80_NO_APROVECHABLES.jpg'} value='negro' onClick={verificar} alt='negro' />
+        <img className='imagenes' src={juegoTerminado ? "https://i.pinimg.com/236x/81/01/a4/8101a432ae9f1f92cb7aa0d87cec54de.jpg" : 'https://www.jqs-consulting.com/wp-content/uploads/2023/03/63.png'} value='amarillo' onClick={verificar} alt='amarillo' />
       </div>
     </>
   )

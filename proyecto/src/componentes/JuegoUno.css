@@ -20,9 +20,7 @@ h6{
 }
 
 .imagenObjeto{
-    max-width: 19rem;
-    min-width: 10rem;
-    min-height: 15rem;
+    min-height: 18rem;
     max-height: 25rem;
 }
 
