@@ -1,4 +1,4 @@
-import './JuegoUno.css'
+import './Juegos.css'
 import React, { useEffect, useState } from "react"
 
 const JuegoDos = (props) => {

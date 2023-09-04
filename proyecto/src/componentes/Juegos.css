@@ -19,6 +19,11 @@ h6{
     cursor: pointer;
 }
 
+.centrarJust{
+    display: flex;
+    justify-content: center;
+  }
+
 .imagenObjeto{
     min-height: 18rem;
     max-height: 25rem;

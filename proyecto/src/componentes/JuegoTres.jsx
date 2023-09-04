@@ -1,4 +1,4 @@
-import './Home.css'
+import './Juegos.css'
 import React from "react"
 
 
