@@ -25,8 +25,9 @@ h6{
   }
 
 .imagenObjeto{
-    min-height: 18rem;
-    max-height: 25rem;
+    width: auto;
+    min-height: 12rem;
+    max-height: 16rem;
 }
 
 .margenJuegoDos{    

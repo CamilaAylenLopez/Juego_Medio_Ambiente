@@ -32,7 +32,7 @@ const PuntosVerdes = () => {
 
     return (
         <>
-        <h1 className='titulo'>Puntos verdes cerca de tu zona!!</h1>
+        <h1 className='titulo'>Puntos verdes en tu zona!!</h1>
         <div className='posicionarMapa'>
             {userLocation && (
                 <iframe
